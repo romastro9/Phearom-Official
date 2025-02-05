@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moung Phearom | Professional Bio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            color: #2d3436;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Animations */
+        @keyframes gradient-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Profile Image with Gradient Frame */
+        .profile-header {
+            position: relative;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-image-wrapper {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            padding: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #ff6b6b,
+                #4ecdc4,
+                #45b7d1,
+                #96f2d7,
+                #d9f99d,
+                #ff6b6b
+            );
+            animation: gradient-spin 3s linear infinite;
+            z-index: 0;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+            border: 3px solid white;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Verification Badge */
+        .verified-badge {
+            width: 24px;
+            height: 24px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Text Elements */
+        .name {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        /* Links Section */
+        .links-container {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+        }
+
+        .link-card:nth-child(2) { animation-delay: 0.7s; }
+        .link-card:nth-child(3) { animation-delay: 0.8s; }
+        .link-card:nth-child(4) { animation-delay: 0.9s; }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .link-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            animation: fadeInUp 0.8s ease-out 1s backwards;
+        }
+
+        .social-link {
+            font-size: 1.8rem;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #1877f2;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .verified-badge {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="profile-header">
+            <div class="profile-image-wrapper">
+                <img src="https://scontent.fpnh18-6.fna.fbcdn.net/v/t39.30808-6/455856759_488835887081253_1781402015938440192_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHtiOVEBMp7rMr9Yl9MIBDhzTnqeeAjMybNOep54CMzJutEWVq9opOiQpPmJ5d4Dd8kELmaAarAv3mgTkk1OBMv&_nc_ohc=h8bhx2gx100Q7kNvgHlMwPb&_nc_oc=AdgdKOGLk95-BLgL65VhWjpxllIM_kHauo67vVVkBSFDrnEDu08jPJIx9m1Vs3P81oY&_nc_zt=23&_nc_ht=scontent.fpnh18-6.fna&_nc_gid=Ah5TNq6REkjuA0RacXyHDp3&oh=00_AYDqkVHWomYm8VzSLN1s2JW47NIvoY7mt9qgj36PzPsPAw&oe=67A96917" 
+                     alt="Moung Phearom" 
+                     class="profile-image">
+            </div>
+            <h1 class="name">
+                Moung Phearom
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/047/309/930/small_2x/verified-badge-profile-icon-png.png" 
+                     alt="Verified Badge" 
+                     class="verified-badge">
+            </h1>
+            <p class="bio">Graphic Designer • License Service • Web Developer</p>
+        </header>
+
+        <div class="links-container">
+            <a href="https://t.me/Romastro9" class="link-card">
+                <i class="link-icon fas fa-envelope"></i>
+                Contact Me
+            </a>
+            
+            <a href="https://t.me/phearomoffcial" class="link-card">
+                <i class="link-icon fas fa-user-plus"></i>
+                Join With Me
+            </a>
+            
+            <a href="http://www.Romsmm.cam" class="link-card">
+                <i class="link-icon fas fa-globe"></i>
+                Visit Romsmm.cam
+            </a>
+            
+            <a href="https://t.me/p_store_channel" class="link-card">
+                <i class="link-icon fas fa-shopping-cart"></i>
+                My Products
+            </a>
+        </div>
+
+        <div class="social-links">
+            <a href="https://t.me/Romastro9" class="social-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+</body>
+</html>
